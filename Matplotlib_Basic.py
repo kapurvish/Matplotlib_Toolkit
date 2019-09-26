@@ -108,7 +108,28 @@ plt.show()
 
 
 
+x = nm.linspace(start=0,stop=20,num=30)
+#Here we pass two tuples, first indicates the matrix representation of the gird, here we have 2X3.
+#Second tuple is the row and column value for this particular subplot.If we want a particular graph to to span more than
+#one row or column we can use the rowspan and colspan attribute.
+ax1=plt.subplot2grid((2,3),(0,0))
+ax1.plot(x,nm.sin(x))
+ax1.set_label('sine curve')
 
+ax2=plt.subplot2grid((2,3),(0,1))
+ax2.plot(x,nm.cos(x))
+ax2.set_label('cos curve')
+
+ax3=plt.subplot2grid((2,3),(0,2),rowspan=2)
+ax3.plot(x,nm.exp2(x))
+ax3.set_label('Exp Curve')
+
+
+ax4=plt.subplot2grid((2,3),(1,0),colspan=2)
+ax4.plot(x,nm.tan(x))
+ax4.set_label('tan curve')
+
+plt.show()
 
 
 
