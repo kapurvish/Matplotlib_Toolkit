@@ -80,7 +80,17 @@ plt.show()
 #Output plot present in plot_img.md as Figure_4
 
 
+x = nm.linspace(start=0,stop=20,num=30)
+fig=plt.figure()
+#Here ax1 sets the larger axis, span to the width and the height of the figure.
+ax1 = fig.add_axes([0.1,0.1,1,1])
+#ax1.plot(x,nm.sin(x))
 
+#Here ax2 forms the smaller axis, which inset on the larger axis.
+ax2 = fig.add_axes([0.5,0.5,0.4,0.4])
+ax2.plot(x,nm.cos(x))
+plt.show()
+#Output plot present in plot_img.md as Figure_5
 
 
 
