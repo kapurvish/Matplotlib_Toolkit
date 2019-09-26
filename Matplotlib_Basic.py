@@ -124,12 +124,11 @@ ax3=plt.subplot2grid((2,3),(0,2),rowspan=2)
 ax3.plot(x,nm.exp2(x))
 ax3.set_label('Exp Curve')
 
-
 ax4=plt.subplot2grid((2,3),(1,0),colspan=2)
 ax4.plot(x,nm.tan(x))
 ax4.set_label('tan curve')
-
 plt.show()
+#Output plot present in plot_img.md as Figure_7
 
 
 
