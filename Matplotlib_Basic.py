@@ -92,7 +92,19 @@ ax2.plot(x,nm.cos(x))
 plt.show()
 #Output plot present in plot_img.md as Figure_5
 
+x = nm.linspace(start=0,stop=20,num=30)
+#Here figsize=(15,7) is the height and width of the figure in inches
+fig=plt.figure(figsize=(15,7))
+#subplot functionality, it will set up a 2X2 grid to the overall figure.
+#It will plot at the first postion in the grid. top left of the figure.
+ax1 = fig.add_subplot(2,2,1)
+ax1.plot(x,nm.sin(x))
 
+ax2 = fig.add_subplot(2,2,4)
+ax2.plot(x,nm.cos(x))
+
+plt.show()
+#Output plot present in plot_img.md as Figure_6
 
 
 
