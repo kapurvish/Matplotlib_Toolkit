@@ -56,10 +56,28 @@ plt.plot(x_data,nm.cos(x_data),label='cos curve',color = 'm')
 plt.legend()
 #Output plot present in plot_img.md as Figure_3
 
-fig=plt.figure()
+
   
 
+x = nm.linspace(start=0,stop=20,num=30)
+fig=plt.figure()
+#ax = fig.add_axes([0,0,1,1])
+#Here the the first value '0.15', tell the very left of the figure to start
+#Here the the seconnd value '0.6', tell it is postioned one of the above.,It is 0.6 unit as a whole
+# Here the the third value '1', tell the enire widht of the figure 
+# Here the the fourth value '4', tell the enire height of the figure 
+ax1 = fig.add_axes([0.15,0.6,0.6,0.4])
+ax2 = fig.add_axes([0.15,0.1,0.8,0.4])
 
+ax1.plot(x,nm.sin(x))
+ax1.set_xlabel('x',fontsize=15,color='r')
+ax1.set_ylabel('sin(x)',fontsize=15,color='r')
+
+ax2.plot(x,nm.cos(x))
+ax2.set_xlabel('x',fontsize=15,color='r')
+ax2.set_ylabel('cos(x)',fontsize=15,color='r')
+plt.show()
+#Output plot present in plot_img.md as Figure_4
 
 
 
