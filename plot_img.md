@@ -13,3 +13,5 @@ Figure_2 of code: Matplotlib_Basic
 Figure_3 of code: Matplotlib_Basic
 
 ![](plot_img/Figure_3.jpeg)
+
+![](plot_img/Figure_4.jpeg)
