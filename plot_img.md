@@ -33,3 +33,7 @@ Figure_7 of code: Matplotlib_Basic
 Figure_8 of code: Matplotlib_Basic
 
 ![](plot_img/Figure_8.jpeg)
+
+Figure_9 of code: Matplotlib_Basic
+
+![](plot_img/Figure_9.jpeg)
