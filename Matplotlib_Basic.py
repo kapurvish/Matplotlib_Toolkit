@@ -156,3 +156,30 @@ ax2.plot(stock_data['Date'],
 plt.show()
 #Output plot present in plot_img.md as Figure_8
 
+stock_data = pd.read_csv('stocks.csv')
+print(stock_data.head())
+stock_data['Date']=pd.to_datetime(stock_data['Date'])
+fig = plt.figure(figsize=(10,6))
+
+ax1 = fig.add_subplot(2,2,1)
+ax1.set_title('MSFT')
+ax1.plot(stock_data['Date'],
+         stock_data['MSFT'],color='green')
+
+ax2 = fig.add_subplot(2,2,2)
+ax2.set_title('GOOG')
+ax2.plot(stock_data['Date'],
+         stock_data['GOOG'],color='red')
+
+ax3 = fig.add_subplot(2,2,3)
+ax3.set_title('IBM')
+ax3.plot(stock_data['Date'],
+         stock_data['IBM'],color='yellow')
+
+ax4 = fig.add_subplot(2,2,4)
+ax4.set_title('AAPL')
+ax4.plot(stock_data['Date'],
+         stock_data['AAPL'],color='purple')
+
+plt.show()
+#Output plot present in plot_img.md as Figure_9
