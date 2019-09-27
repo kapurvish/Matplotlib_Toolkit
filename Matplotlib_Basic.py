@@ -130,5 +130,29 @@ ax4.set_label('tan curve')
 plt.show()
 #Output plot present in plot_img.md as Figure_7
 
+stock_data = pd.read_csv('stocks.csv')
+print(stock_data.head())
+stock_data['Date']=pd.to_datetime(stock_data['Date'])
+fig = plt.figure(figsize=(10,6))
+#Here ax1 is for APPLE and ax2 is for IBM. axi is bigger one, in which we have ax2
+#dataframe is :
+#       Date       AAPL       ADBE  ...      NFLX       ORCL       SBUX
+#0  3-Jan-07  11.107141  38.869999  ...  3.258571  15.696321  15.752188
+#1  1-Feb-07  10.962033  39.250000  ...  3.218571  15.028588  13.930813
+#2  1-Mar-07  12.037377  41.700001  ...  3.312857  16.583584  14.138198
+#3  2-Apr-07  12.930043  41.560001  ...  3.167143  17.196436  13.984914
+#4  1-May-07  15.701322  44.060001  ...  3.128572  17.726965  12.988567
 
+ax1 = fig.add_axes([0.07,0.07,.9,.9])
+ax2 = fig.add_axes([0.15,0.7,0.4,0.25])
+ax1.set_xlabel('APPLE Stock',fontsize=15,color='r')
+ax2.set_xlabel('IBM Stock',fontsize=15,color='r')
+ax1.plot(stock_data['Date'],
+         stock_data['AAPL'],color='green')
+
+ax1.set_title('APPLE vs IBM')
+ax2.plot(stock_data['Date'],
+         stock_data['IBM'],color='purple')
+plt.show()
+#Output plot present in plot_img.md as Figure_8
 
